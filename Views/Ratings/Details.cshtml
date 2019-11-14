@@ -1,0 +1,52 @@
+﻿@model Product_Ratings_MVC.Models.Rating
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<header class="masthead">
+    <div class="container" style="height:50vh">
+        <div class="intro-text">
+            <div class="intro-lead-in"> Rating Details</div>
+
+
+        </div>
+    </div>
+</header>
+
+<div>
+    <h4>Rating</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RatingValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RatingValue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
